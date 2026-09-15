@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Matemático</title>
+
+    <!--FAVICON cargado desde CDN (GitHub)-->
+    <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/alexander7l/django_project@main/Imagen12.png">
+    <!--CSS cargado desde CDN (github)-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alexander7l/django_project@main/styles_public1.css">
+    <!--KaTeX CSS CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <!--Google Fonts Comic Sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!--Encabezado con Nav-bar y ancles-->
+    <header class="header">
+        <div class="logo">
+            <img src="https://cdn.jsdelivr.net/gh/alexander7l/djando_project@main/Imagen12.png" alt="Logo" width="30" height="30" style="vertical-align: middle;">   
+            <span>Formulario Matemático</span>
+        </div>
+        <nav class="nav">
+            <a href="#algebra">Álgebra</a>
+            <a href="#trigonometria">Trigonometría</a>
+            <a href="#diferenciacion">Diferenciación</a>
+            <a href="#integracion">Integración</a>
+            <a href="/login/">Funciones avanzadas</a>
+        </nav>
+    </header>
+
+    <!--Contenedor Principal-->
+    <main class="container">
+
+        <div class="page-title">
+            <h1>Formulario General de Matemáticas</h1>
+            <p>Compendio de fórmulas fundamentales de Álgebra, Trigonometría, Cálculo y Funciones avanzadas.</p>
+        </div>
+
+        <!--ALGEBRA-->
+        <section id="algebra" class="section-card">
+            <h2 class="section-title">1. Álgebra</h2>
+            
+            <div class="block">
+                <h3>Desigualdades</h3>
+                <ol class="formula-list">
+                    <li>Si $a < b$ y $b < c$, entonces $a < c$</li>
+                    <li>Si $a < b$, entonces $a + c < b + c$</li>
+                    <li>Si $a < b$ y $c > 0$, entonces $ac < bc$</li>
+                    <li>Si $a < b$ y $c < 0$, entonces $ac > bc$</li>
+                    <li>Si $a < b$ y $c < d$, entonces $a + c < b + d$</li>
+                    <li>Si $0 < a < b$ y $0 < c < d$, entonces $ac < bd$</li>
+                    <li>Si $a < b$ y $ab > 0$, entonces $\frac{1}{a} > \frac{1}{b}$</li>
+                </ol>
+            </div>
+
+            <div class="block">
+                <h3>Valor Absoluto</h3>
+                <ol class="formula-list">
+                    <li>$|a| = \sqrt{a^2}$</li>
+                    <li>$|ab| = |a| \cdot |b|$</li>
+                    <li>$\left|\frac{a}{b}\right| = \frac{|a|}{|b|}$</li>
+                    <li>$|x| < k \ (k > 0)$ si, y solo si, $-k < x < k$</li>
+                    <li>$|x| > k \ (k \ge 0)$ si, y solo si, $x < -k \text{ o } x > k$</li>
+                </ol>
+            </div>
+
+            <div class="block">
+                <h3>Exponentes y Radicales</h3>
+                <p class="sub-title">Exponentes:</p>
+                <ol class="formula-list">
+                    <li>$b^m b^n = b^{m+n}$</li>
+                    <li>$\frac{b^m}{b^n} = b^{m-n}$</li>
+                    <li>$(b^m)^n = b^{mn}$</li>
+                    <li>$(ab)^m = a^m b^m$</li>
+                    <li>$\left(\frac{a}{b}\right)^m = \frac{a^m}{b^m}$</li>
+                    <li>$b^{-n} = \frac{1}{b^n}$</li>
+                </ol>
+                <p class="sub-title">Radicales:</p>
+                <ol class="formula-list">
+                    <li>$b^{1/n} = \sqrt[n]{b}$</li>
+                    <li>$b^{m/n} = (\sqrt[n]{b})^m = \sqrt[n]{b^m}$</li>
+                    <li>$\sqrt[n]{a} \cdot \sqrt[n]{b} = \sqrt[n]{ab}$</li>
+                    <li>$\frac{\sqrt[n]{a}}{\sqrt[n]{b}} = \sqrt[n]{\frac{a}{b}}$</li>
+                    <li>$\sqrt[m]{\sqrt[n]{a}} = \sqrt[mn]{a}$</li>
+                    <li>$b^{-1} = \frac{1}{b}$</li>
+                </ol>
+            </div>
+
+            <div class="block">
+                <h3>Logaritmos</h3>
+                <ol class="formula-list">
+                    <li>$\log_b N = x \iff b^x = N$</li>
+                    <li>$\log_b(MN) = \log_b M + \log_b N$</li>
+                    <li>$\log_b\left(\frac{M}{N}\right) = \log_b M - \log_b N$</li>
+                    <li>$\log_b(N^k) = k \log_b N$</li>
+                    <li>$\log_b N = \frac{\ln N}{\ln b}$</li>
+                    <li>$\log_b(b^x) = x$</li>
+                    <li>$b^{\log_b x} = x$</li>
+                    <li>$\ln x = \log_e x, \quad \log x = \log_{10} x$</li>
+                </ol>
+            </div>
+
+            <div class="block">
+                <h3>Fórmulas de Factorización y Multiplicación</h3>
+                <ol class="formula-list">
+                    <li>$a^2 - b^2 = (a+b)(a-b)$</li>
+                    <li>$a^3 - b^3 = (a-b)(a^2 + ab + b^2)$</li>
+                    <li>$a^3 + b^3 = (a+b)(a^2 - ab + b^2)$</li>
+                    <li>$a^2 + 2ab + b^2 = (a+b)^2$</li>
+                    <li>$a^2 - 2ab + b^2 = (a-b)^2$</li>
+                    <li>$a^3 + 3a^2b + 3ab^2 + b^3 = (a+b)^3$</li>
+                    <li>$a^3 - 3a^2b + 3ab^2 - b^3 = (a-b)^3$</li>
+                </ol>
+            </div>
+
+            <div class="block">
+                <h3>Fórmula Cuadrática</h3>
+                <p>Para $ax^2 + bx + c = 0$:</p>
+                <div class="formula-highlight">
+                    $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
+                </div>
+            </div>
+        </section>
+
+        <!--TRIGONOMETRIA-->
+        <section id="trigonometria" class="section-card">
+            <h2 class="section-title">2. Trigonometría</h2>
+
+            <div class="block">
+                <h3>Identidades Fundamentales</h3>
+                <ul class="formula-list">
+                    <li>$\sin x \csc x = 1$</li>
+                    <li>$\cos x \sec x = 1$</li>
+                    <li>$\tan x \cot x = 1$</li>
+                    <li>$\tan x = \frac{\sin x}{\cos x}$</li>
+                    <li>$\cot x = \frac{\cos x}{\sin x}$</li>
+                    <li>$\sin^2 x + \cos^2 x = 1$</li>
+                    <li>$1 + \tan^2 x = \sec^2 x$</li>
+                    <li>$1 + \cot^2 x = \csc^2 x$</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3>Fórmulas para la Suma y Resta</h3>
+                <p class="sub-title">Suma:</p>
+                <ul class="formula-list">
+                    <li>$\sin(x + y) = \sin x \cos y + \sin y \cos x$</li>
+                    <li>$\cos(x + y) = \cos x \cos y - \sin x \sin y$</li>
+                    <li>$\tan(x + y) = \frac{\tan x + \tan y}{1 - \tan x \tan y}$</li>
+                </ul>
+                <p class="sub-title">Resta:</p>
+                <ul class="formula-list">
+                    <li>$\sin(x - y) = \sin x \cos y - \sin y \cos x$</li>
+                    <li>$\cos(x - y) = \cos x \cos y + \sin x \sin y$</li>
+                    <li>$\tan(x - y) = \frac{\tan x - \tan y}{1 + \tan x \tan y}$</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3>Doble y Mitad de un Ángulo</h3>
+                <p class="sub-title">Doble de un ángulo:</p>
+                <ul class="formula-list">
+                    <li>$\sin 2x = 2 \sin x \cos x$</li>
+                    <li>$\cos 2x = \cos^2 x - \sin^2 x = 1 - 2\sin^2 x = 2\cos^2 x - 1$</li>
+                    <li>$\tan 2x = \frac{2 \tan x}{1 - \tan^2 x}$</li>
+                </ul>
+                <p class="sub-title">Mitad de un ángulo:</p>
+                <ul class="formula-list">
+                    <li>$\sin \frac{x}{2} = \pm \sqrt{\frac{1 - \cos x}{2}}$</li>
+                    <li>$\cos \frac{x}{2} = \pm \sqrt{\frac{1 + \cos x}{2}}$</li>
+                    <li>$\tan \frac{x}{2} = \frac{1 - \cos x}{\sin x} = \frac{\sin x}{1 + \cos x}$</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3>Fórmulas para Cuadrados</h3>
+                <ul class="formula-list">
+                    <li>$\sin^2 x = \frac{1 - \cos 2x}{2}$</li>
+                    <li>$\cos^2 x = \frac{1 + \cos 2x}{2}$</li>
+                    <li>$\tan^2 x = \frac{1 - \cos 2x}{1 + \cos 2x}$</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3>Productos de Senos y Cosenos</h3>
+                <ul class="formula-list">
+                    <li>$\sin A \sin B = -\frac{1}{2}\cos(A+B) + \frac{1}{2}\cos(A-B)$</li>
+                    <li>$\sin A \cos B = \frac{1}{2}\sin(A+B) + \frac{1}{2}\sin(A-B)$</li>
+                    <li>$\cos A \sin B = \frac{1}{2}\sin(A+B) - \frac{1}{2}\sin(A-B)$</li>
+                    <li>$\cos A \cos B = \frac{1}{2}\cos(A+B) + \frac{1}{2}\cos(A-B)$</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3>Ángulos Negativos</h3>
+                <ul class="formula-list">
+                    <li>$\sin(-\theta) = -\sin \theta, \quad \csc(-\theta) = -\csc \theta$</li>
+                    <li>$\cos(-\theta) = \cos \theta, \quad \sec(-\theta) = \sec \theta$</li>
+                    <li>$\tan(-\theta) = -\tan \theta, \quad \cot(-\theta) = -\cot \theta$</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3>Leyes de Senos y Cosenos</h3>
+                <p class="sub-title">Ley de Senos:</p>
+                <div class="formula-highlight">
+                    $$\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C}$$
+                </div>
+                <p class="sub-title">Ley de Cosenos:</p>
+                <ul class="formula-list">
+                    <li>$a^2 = b^2 + c^2 - 2bc \cos A$</li>
+                    <li>$b^2 = a^2 + c^2 - 2ac \cos B$</li>
+                    <li>$c^2 = a^2 + b^2 - 2ab \cos C$</li>
+                </ul>
+            </div>
+        </section>
+
+        <!--DIFERENCIACION-->
+        <section id="diferenciacion" class="section-card">
+            <h2 class="section-title">3. Fórmulas de Diferenciación</h2>
+            
+            <div class="block">
+                <h3>Reglas Principales</h3>
+                <ol class="formula-list">
+                    <li>$\frac{d}{dx}(c) = 0$</li>
+                    <li>$\frac{d}{dx}(x) = 1$</li>
+                    <li>$\frac{d}{dx}(u+v) = \frac{d}{dx}(u) + \frac{d}{dx}(v)$</li>
+                    <li>$\frac{d}{dx}(cv) = c \frac{d}{dx}(v)$</li>
+                    <li>$\frac{d}{dx}(uv) = u \frac{d}{dx}(v) + v \frac{d}{dx}(u)$</li>
+                    <li>$\frac{d}{dx}(v^n) = n v^{n-1} \frac{d}{dx}(v)$</li>
+                    <li>$\frac{d}{dx}\left(\frac{u}{v}\right) = \frac{v \frac{d}{dx}(u) - u \frac{d}{dx}(v)}{v^2}$</li>
+                    <li>$\frac{d}{dx}(\sin v) = \cos v \frac{d}{dx}(v)$</li>
+                    <li>$\frac{d}{dx}(\cos v) = -\sin v \frac{d}{dx}(v)$</li>
+                    <li>$\frac{d}{dx}(\tan v) = \sec^2 v \frac{d}{dx}(v)$</li>
+                    <li>$\frac{d}{dx}(\cot v) = -\csc^2 v \frac{d}{dx}(v)$</li>
+                    <li>$\frac{d}{dx}(\sec v) = \sec v \tan v \frac{d}{dx}(v)$</li>
+                    <li>$\frac{d}{dx}(\csc v) = -\csc v \cot v \frac{d}{dx}(v)$</li>
+                    <li>$\frac{d}{dx}(\arcsin v) = \frac{\frac{d}{dx}(v)}{\sqrt{1-v^2}}$</li>
+                    <li>$\frac{d}{dx}(\arccos v) = \frac{-\frac{d}{dx}(v)}{\sqrt{1-v^2}}$</li>
+                    <li>$\frac{d}{dx}(\arctan v) = \frac{\frac{d}{dx}(v)}{1+v^2}$</li>
+                    <li>$\frac{d}{dx}(\text{arccot } v) = \frac{-\frac{d}{dx}(v)}{1+v^2}$</li>
+                    <li>$\frac{d}{dx}(\text{arcsec } v) = \frac{\frac{d}{dx}(v)}{v\sqrt{v^2-1}}$</li>
+                    <li>$\frac{d}{dx}(\text{arccsc } v) = \frac{-\frac{d}{dx}(v)}{v\sqrt{v^2-1}}$</li>
+                    <li>$\frac{d}{dx}(\log_a v) = \frac{\frac{d}{dx}(v)}{v} \log_a e$</li>
+                    <li>$\frac{d}{dx}(\ln v) = \frac{\frac{d}{dx}(v)}{v}$</li>
+                    <li>$\frac{d}{dx}(a^v) = a^v \ln a \frac{d}{dx}(v)$</li>
+                    <li>$\frac{d}{dx}(e^v) = e^v \frac{d}{dx}(v)$</li>
+                    <li>$\frac{d}{dx}(u^v) = v u^{v-1} \frac{d}{dx}(u) + u^v \ln u \frac{d}{dx}(v)$</li>
+                </ol>
+            </div>
+        </section>
+
+        <!--INTEGRACION-->
+        <section id="integracion" class="section-card">
+            <h2 class="section-title">4. Fórmulas de Integración</h2>
+            
+            <div class="block">
+                <h3>Integrales Fundamentales</h3>
+                <ol class="formula-list">
+                    <li>$\int (du + dv) = \int du + \int dv$</li>
+                    <li>$\int a \, du = a \int du$</li>
+                    <li>$\int dx = x + C$</li>
+                    <li>$\int u^n \, du = \frac{u^{n+1}}{n+1} + C \quad (n \ne -1)$</li>
+                    <li>$\int \frac{du}{u} = \ln|u| + C$</li>
+                    <li>$\int a^u \, du = \frac{a^u}{\ln a} + C$</li>
+                    <li>$\int e^u \, du = e^u + C$</li>
+                    <li>$\int \sin u \, du = -\cos u + C$</li>
+                    <li>$\int \cos u \, du = \sin u + C$</li>
+                    <li>$\int \sec^2 u \, du = \tan u + C$</li>
+                    <li>$\int \csc^2 u \, du = -\cot u + C$</li>
+                    <li>$\int \sec u \tan u \, du = \sec u + C$</li>
+                    <li>$\int \csc u \cot u \, du = -\csc u + C$</li>
+                    <li>$\int \tan u \, du = -\ln|\cos u| + C = \ln|\sec u| + C$</li>
+                    <li>$\int \cot u \, du = \ln|\sin u| + C$</li>
+                    <li>$\int \sec u \, du = \ln|\sec u + \tan u| + C$</li>
+                    <li>$\int \csc u \, du = \ln|\csc u - \cot u| + C$</li>
+                    <li>$\int \frac{du}{u^2 + a^2} = \frac{1}{a} \arctan \frac{u}{a} + C$</li>
+                    <li>$\int \frac{du}{u^2 - a^2} = \frac{1}{2a} \ln\left|\frac{u - a}{u + a}\right| + C \quad (u^2 > a^2)$</li>
+                    <li>$\int \frac{du}{a^2 - u^2} = \frac{1}{2a} \ln\left|\frac{a + u}{a - u}\right| + C \quad (a^2 > u^2)$</li>
+                    <li>$\int \frac{du}{\sqrt{a^2 - u^2}} = \arcsin \frac{u}{a} + C$</li>
+                    <li>$\int \frac{du}{\sqrt{u^2 \pm a^2}} = \ln\left|u + \sqrt{u^2 \pm a^2}\right| + C$</li>
+                    <li>$\int \sqrt{a^2 - u^2} \, du = \frac{u}{2}\sqrt{a^2 - u^2} + \frac{a^2}{2} \arcsin \frac{u}{a} + C$</li>
+                    <li>$\int \sqrt{u^2 \pm a^2} \, du = \frac{u}{2}\sqrt{u^2 \pm a^2} \pm \frac{a^2}{2} \ln\left|u + \sqrt{u^2 \pm a^2}\right| + C$</li>
+                    <li>$\int \frac{du}{u\sqrt{u^2 - a^2}} = \frac{1}{a} \text{arcsec } \frac{u}{a} + C$</li>
+                </ol>
+            </div>
+
+            <div class="block">
+                <h3>Variaciones Trigonométricas</h3>
+                <ol class="formula-list" start="26">
+                    <li>$\int \sin^n u \cos u \, du = \frac{\sin^{n+1} u}{n+1} + C$</li>
+                    <li>$\int \cos^n u (-\sin u) \, du = \frac{\cos^{n+1} u}{n+1} + C$</li>
+                    <li>$\int \tan^n u \sec^2 u \, du = \frac{\tan^{n+1} u}{n+1} + C$</li>
+                    <li>$\int \cot^n u (-\csc^2 u) \, du = \frac{\cot^{n+1} u}{n+1} + C$</li>
+                    <li>$\int \sec^n u \sec u \tan u \, du = \frac{\sec^{n+1} u}{n+1} + C$</li>
+                    <li>$\int \csc^n u (-\csc u \cot u) \, du = \frac{\csc^{n+1} u}{n+1} + C$</li>
+                </ol>
+            </div>
+
+            <div class="block">
+                <h3>Sustitución Trigonométrica</h3>
+                <ul class="formula-list">
+                    <li>Para $\sqrt{a^2 - u^2}$ hacer $u = a \sin \theta$</li>
+                    <li>Para $\sqrt{a^2 + u^2}$ hacer $u = a \tan \theta$</li>
+                    <li>Para $\sqrt{u^2 - a^2}$ hacer $u = a \sec \theta$</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3>Integración por Partes</h3>
+                <div class="formula-highlight">
+                    $$\int u \, dv = u v - \int v \, du$$
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de Pagina -->
+    <footer class="footer">
+        <p>Formulario de Álgebra, Trigonometría, Cálculo Diferencial e Integral -- Renderizado con KaTeX</p>
+        <p>Miguel Alejandro Gutierrez Frias · ESIME · IPN</p>
+    </footer>
+
+    <!-- Script de KaTeX importado -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {
+            delimiters: [
+                {left: '$$', right: '$$', display: true},
+                {left: '$', right: '$', display: false}
+            ]
+        });"></script>
+        
+</body>
+</html>

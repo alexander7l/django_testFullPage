@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Integración Avanzada y Funciones Especiales</title>
+
+    <!--FAVICON cargado desde CDN (GitHub)-->
+    <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/alexander7l/django_project@main/Imagen12.png">
+    <!--CSS cargado desde CDN (github)-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alexander7l/django_project@main/styles_public1.css">
+    <!--KaTeX CSS CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <!--Google Fonts Comic Sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!--Encabezado con Nav-bar y ancles-->
+    <header class="header">
+        <div class="logo">
+            <img src="https://cdn.jsdelivr.net/gh/alexander7l/djando_project@main/Imagen12.png" alt="Logo" width="30" height="30" style="vertical-align: middle;">   
+            <span>Formulario Matemático</span>
+        </div>
+        <nav class="nav">
+            <a href="#tecnicas">Técnicas y Trucos</a>
+            <a href="#funciones-especiales">Funciones Especiales</a>
+            <a href="#integrales-notables">Integrales Notables</a>
+            <a href="/">Inicio</a>
+        </nav>
+    </header>
+
+    <!--Contenedor Principal-->
+    <main class="container">
+
+        <div class="page-title">
+            <h1>Técnicas de Integración y Funciones Especiales</h1>
+            <p>Compendio de técnicas avanzadas de integración, identidades de funciones especiales e integrales notables.</p>
+        </div>
+
+        <!-- TECNICAS Y TRUCOS DE INTEGRACION -->
+        <section id="tecnicas" class="section-card">
+            <h2 class="section-title">1. Técnicas y Trucos de Integración</h2>
+            
+            <div class="block">
+                <h3>Feynman's Trick (Regla de Leibniz)</h3>
+                <p>Diferenciación bajo el signo de integración:</p>
+                <div class="formula-highlight">
+                    $$\frac{d}{da} \int_{g(a)}^{h(a)} f(x,a) \, dx$$
+                </div>
+            </div>
+
+            <div class="block">
+                <h3>Sustitución de Weierstrass (Tangente del medio ángulo)</h3>
+                <p>Cambio de variable $t = \tan(x/2)$ para integrales de funciones racionales trigonométricas.</p>
+            </div>
+
+            <div class="block">
+                <h3>King's Property</h3>
+                <div class="formula-highlight">
+                    $$\int_{a}^{b} f(x) \, dx = \int_{a}^{b} f(a + b - x) \, dx$$
+                </div>
+            </div>
+
+            <div class="block">
+                <h3>Queen's Property</h3>
+                <div class="formula-highlight">
+                    $$\int_{0}^{2a} f(x) \, dx = \int_{0}^{a} \big[f(x) + f(2a - x)\big] \, dx$$
+                </div>
+            </div>
+
+            <div class="block">
+                <h3>Teorema de Glasser (Master Theorem)</h3>
+                <div class="formula-highlight">
+                    $$\int_{-\infty}^{\infty} f\left(x - \frac{a}{x}\right) \, dx = \int_{-\infty}^{\infty} f(x) \, dx \quad (a > 0)$$
+                </div>
+            </div>
+
+            <div class="block">
+                <h3>Fórmula de Wallis</h3>
+                <p>Integrales de potencias de senos y cosenos en el intervalo $[0, \pi/2]$.</p>
+            </div>
+
+            <div class="block">
+                <h3>Integración por Contornos Complejos y Teorema de los Residuos</h3>
+                <p>Evaluación de integrales reales mediante la integración en el plano complejo y la suma de residuos.</p>
+            </div>
+
+            <div class="block">
+                <h3>Lema de Jordan y Cota ML ($ML$ Bound)</h3>
+                <p>Acotamiento de integrales sobre contornos y arcos en el plano complejo.</p>
+            </div>
+        </section>
+
+        <!-- FUNCIONES ESPECIALES E IDENTIDADES -->
+        <section id="funciones-especiales" class="section-card">
+            <h2 class="section-title">2. Funciones Especiales e Identidades</h2>
+
+            <div class="block">
+                <h3>Función W de Lambert $W(z)$</h3>
+                <p>Inversa de $f(w) = w e^w$. Utilizada para resolver integrales con productos de logaritmos y potencias o exponenciales acopladas.</p>
+            </div>
+
+            <div class="block">
+                <h3>Función Gamma $\Gamma(z)$</h3>
+                <div class="formula-highlight">
+                    $$\Gamma(z) = \int_{0}^{\infty} x^{z-1} e^{-x} \, dx$$
+                </div>
+                <p>Diverge únicamente para $z = 0, -1, -2, -3, \dots$</p>
+            </div>
+
+            <div class="block">
+                <h3>Función Beta $B(x,y)$ y sus Representaciones Equivalentes</h3>
+                <div class="formula-highlight">
+                    $$B(x,y) = \frac{\Gamma(x)\Gamma(y)}{\Gamma(x+y)}$$
+                </div>
+                <p class="sub-title">Formas integrales equivalentes según los límites:</p>
+                <ul class="formula-list">
+                    <li>Intervalo $[0, 1]$: $\int_{0}^{1} t^{x-1}(1-t)^{y-1} \, dt$</li>
+                    <li>Intervalo $[0, \infty)$: $\int_{0}^{\infty} \frac{u^{x-1}}{(1+u)^{x+y}} \, du$</li>
+                    <li>Trigonométrica $[0, \pi/2]$: $2\int_{0}^{\pi/2} \sin^{2x-1}(\theta)\cos^{2y-1}(\theta) \, d\theta$</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3>Fórmula de Reflexión de Euler</h3>
+                <div class="formula-highlight">
+                    $$\Gamma(z) \, \Gamma(1-z) = \frac{\pi}{\sin(\pi z)}$$
+                </div>
+            </div>
+
+            <div class="block">
+                <h3>Fórmula de Duplicación de Legendre</h3>
+                <div class="formula-highlight">
+                    $$\Gamma(z) \, \Gamma\left(z + \frac{1}{2}\right) = 2^{1-2z} \sqrt{\pi} \; \Gamma(2z)$$
+                </div>
+            </div>
+
+            <div class="block">
+                <h3>Función Pi de Gauss $\Pi(z)$</h3>
+                <p>Notación factorial desplazada $\Pi(z) = \Gamma(z+1) = z!$.</p>
+            </div>
+        </section>
+
+        <!-- INTEGRALES NOTABLES / FAMILIAS DE INTEGRALES -->
+        <section id="integrales-notables" class="section-card">
+            <h2 class="section-title">3. Integrales Notables / Familias de Integrales (Generalizadas)</h2>
+            
+            <div class="block">
+                <h3>Integral de Dirichlet</h3>
+                <div class="formula-highlight">
+                    $$\int_{0}^{\infty} \frac{\sin(ax)}{x} \, dx = \frac{\pi}{2} \operatorname{sgn}(a)$$
+                </div>
+            </div>
+
+            <div class="block">
+                <h3>Integrales de Fresnel (Dominio Simétrico y Parámetros)</h3>
+                <p>Simétricas e impares/pares en el dominio $[-\infty, \infty]$:</p>
+                <div class="formula-highlight">
+                    $$\int_{-\infty}^{\infty} \cos(a x^2) \, dx = \int_{-\infty}^{\infty} \sin(a x^2) \, dx = \sqrt{\frac{\pi}{2a}} \quad (a > 0)$$
+                </div>
+            </div>
+
+            <div class="block">
+                <h3>Integral Gaussiana Generalizada</h3>
+                <p>Par en $[-\infty, \infty]$:</p>
+                <div class="formula-highlight">
+                    $$\int_{-\infty}^{\infty} e^{-a x^2} \, dx = \sqrt{\frac{\pi}{a}} \quad (a > 0)$$
+                </div>
+            </div>
+
+            <div class="block">
+                <h3>Integral de Frullani</h3>
+                <div class="formula-highlight">
+                    $$\int_{0}^{\infty} \frac{f(ax) - f(bx)}{x} \, dx = (f(0) - f(\infty)) \ln\left(\frac{b}{a}\right) \quad (a, b > 0)$$
+                </div>
+            </div>
+
+            <div class="block">
+                <h3>Integral de Ahmed</h3>
+                <div class="formula-highlight">
+                    $$\int_{0}^{1} \frac{\arctan\left(\sqrt{x^2+2}\right)}{(x^2+1)\sqrt{x^2+2}} \, dx = \frac{5\pi^2}{96}$$
+                </div>
+            </div>
+
+            <div class="block">
+                <h3>Integral de Serret / Hardy</h3>
+                <div class="formula-highlight">
+                    $$\int_{0}^{\pi/2} \ln(\sin x) \, dx = -\frac{\pi}{2}\ln(2)$$
+                </div>
+            </div>
+
+            <div class="block">
+                <h3>Familia de Integrales Racionales y Trigonométricas Complejas ($\cos(ax) / (x^n + b)$)</h3>
+                <p>Evaluadas de $-\infty$ a $\infty$ mediante residuos y Lema de Jordan en el plano complejo.</p>
+            </div>
+
+            <div class="block">
+                <h3>Integrales de Cox y Cortes de Rama (Branch Cuts)</h3>
+                <p>Integrales racionales logarítmicas con puntos de ramificación y cortes de rama en el plano complejo.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de Pagina -->
+    <footer class="footer">
+        <p>Formulario de Técnicas de Integración Avanzada y Funciones Especiales -- Renderizado con KaTeX</p>
+        <p>Miguel Alejandro Gutierrez Frias · ESIME · IPN</p>
+    </footer>
+
+    <!-- Script de KaTeX importado -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {
+            delimiters: [
+                {left: '$$', right: '$$', display: true},
+                {left: '$', right: '$', display: false}
+            ]
+        });"></script>
+        
+</body>
+</html>

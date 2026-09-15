@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso - Formulario Avanzado</title>
+
+    <!--FAVICON cargado desde CDN (GitHub)-->
+    <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/alexander7l/django_project@main/Imagen12.png">
+    <!--CSS cargado desde CDN (github)-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alexander7l/django_project@main/styles_login.css">
+    <!--Google Fonts Comic Sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <h2>Iniciar Sesión</h2>
+        <p>Ingresa para acceder a la biblioteca avanzada de fórmulas.</p>
+
+        <!-- action se dirige al forms, method post por que envia los datos a ser validados -->
+        <form action="/login/" method="POST">
+            <!-- Linea necesaria para validar que no se llena el forms en un sitio externo -->
+            {% csrf_token %}
+
+            <div>
+                <label>Usuario</label><br>
+                <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required>
+                <!-- El name = "username" es el nombre de la clave que tendra el valor del input en el diccionario" -->
+            </div>
+            <br> 
+            <!-- El break simula un margin mas entre los divs -->
+            <div>
+                <label>Contraseña</label><br>
+                <input type="password" id="password" name="password" placeholder="••••••••" required>
+                <!-- El name = "password" es el nombre de la clave que tendra el valor del input en el diccionario" -->
+            </div>
+            <br>
+            <!-- Boton que sirve como trigger para que sea empaquetado y enviado la info -->
+            <button type="submit">Entrar</button> 
+        </form>
+        <br>
+        <!-- "Mostratmos el error que la funcion de renderizado en la app publica (views.py) 
+        regresa si las contraseñas son erroneas" -->
+        <!--  Django automaticamente formatea un diccionario u objeto a variables --> 
+        {% if error %}
+            <p style="color: red; font-weight: bold;">{{ error }}</p>
+        {% endif %}
+
+        <!-- Ancle que regresa a la app principal (root) -->
+        <a href="/">Volver al Inicio</a> 
+    </div>
+
+</body>
+</html>
